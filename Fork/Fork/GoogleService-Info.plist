@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>165134275131-6rcbvqe2q81foi16om8c4u2pm7t28br2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.165134275131-6rcbvqe2q81foi16om8c4u2pm7t28br2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCwl6OvUgi3hkNUe1XzZyFSSunRAVHzpq4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>165134275131</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>keithc.Fork</string>
+	<key>PROJECT_ID</key>
+	<string>fork-42d06</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fork-42d06.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:165134275131:ios:c454338c6f4df52e04c21e</string>
+	<key>DATABASE_URL</key>
+	<string>https://fork-42d06.firebaseio.com</string>
+</dict>
+</plist>
