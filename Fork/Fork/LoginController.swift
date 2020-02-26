@@ -45,6 +45,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
         emailField.iconText = "\u{f1fa}"
         emailField.iconMarginBottom = 4.0
         emailField.iconMarginLeft = 2.0
+        emailField.autocorrectionType = .no
+        emailField.autocapitalizationType = .none
+        emailField.spellCheckingType = .no
         self.view.addSubview(emailField)
         
         passField.tintColor = purple

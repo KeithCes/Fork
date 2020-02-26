@@ -11,6 +11,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import SkyFloatingLabelTextField
+import FirebaseDatabase
 
 
 let screenWidth  = UIScreen.main.fixedCoordinateSpace.bounds.width
@@ -53,6 +54,9 @@ class CreateController: UIViewController, UITextFieldDelegate {
         userField.iconText = "\u{f007}"
         userField.iconMarginBottom = 4.0
         userField.iconMarginLeft = 2.0
+        userField.autocorrectionType = .no
+        userField.autocapitalizationType = .none
+        userField.spellCheckingType = .no
         self.view.addSubview(userField)
         
         emailField.tintColor = purple
@@ -71,6 +75,9 @@ class CreateController: UIViewController, UITextFieldDelegate {
         emailField.iconText = "\u{f1fa}"
         emailField.iconMarginBottom = 4.0
         emailField.iconMarginLeft = 2.0
+        emailField.autocorrectionType = .no
+        emailField.autocapitalizationType = .none
+        emailField.spellCheckingType = .no
         self.view.addSubview(emailField)
         
         passField.tintColor = purple
@@ -105,14 +112,31 @@ class CreateController: UIViewController, UITextFieldDelegate {
     func submit() {
         if (userField.text != "" && passField.text != "" && emailField.text != "") {
                 
-                username = userField.text!
-                password = passField.text!
-                email = emailField.text!
-                
+            username = userField.text!
+            password = passField.text!
+            email = emailField.text!
             
+            let db = Firestore.firestore()
+                
+            //sets data in database and auth system
             Auth.auth().createUser(withEmail: email, password: password) { username, error in
                 if error == nil && username != nil {
                     print("user created")
+                    
+                    //adds to database
+                    var ref: DocumentReference? = nil
+                    ref = db.collection("users").addDocument(data: [
+                        "username": self.userField.text!,
+                        "email": self.emailField.text!,
+                    ]) { err in
+                        if let err = err {
+                            print("error adding document: \(err)")
+                        } else {
+                            print("user added with ID: \(ref!.documentID)")
+                        }
+                    }
+                    
+                    
                     self.transitionToFork()
                 }
                 else {

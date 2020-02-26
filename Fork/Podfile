@@ -10,5 +10,6 @@ target 'Fork' do
   pod 'FirebaseFirestoreSwift'
   pod 'SkyFloatingLabelTextField'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   
 end
