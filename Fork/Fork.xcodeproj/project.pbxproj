@@ -20,6 +20,7 @@
 		53E4AC9123ECA6B000CED390 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E4AC9023ECA6B000CED390 /* MainController.swift */; };
 		53E4AC9323ECB3E600CED390 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E4AC9223ECB3E600CED390 /* SettingsController.swift */; };
 		53E4ACE123ECDB3200CED390 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E4ACE023ECDB3200CED390 /* TabBarController.swift */; };
+		53EB7ADD2426B20500779FED /* ReceivedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB7ADC2426B20500779FED /* ReceivedController.swift */; };
 		D7178F2125CD1EB7FA98F1BB /* Pods_Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56300E5999915371ACC9FF92 /* Pods_Fork.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		53E4AC9023ECA6B000CED390 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		53E4AC9223ECB3E600CED390 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		53E4ACE023ECDB3200CED390 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		53EB7ADC2426B20500779FED /* ReceivedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedController.swift; sourceTree = "<group>"; };
 		56300E5999915371ACC9FF92 /* Pods_Fork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		777604B1D5D13A28DB2D6316 /* Pods-Fork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fork.release.xcconfig"; path = "Target Support Files/Pods-Fork/Pods-Fork.release.xcconfig"; sourceTree = "<group>"; };
 		ED76CE79C12481D91E0E9BB5 /* Pods-Fork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fork.debug.xcconfig"; path = "Target Support Files/Pods-Fork/Pods-Fork.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,11 +82,12 @@
 			children = (
 				53E4AC8223E8E15800CED390 /* GoogleService-Info.plist */,
 				53E4AC8823EB5A3000CED390 /* ForkController.swift */,
+				53EB7ADC2426B20500779FED /* ReceivedController.swift */,
+				53E4AC9223ECB3E600CED390 /* SettingsController.swift */,
+				53E4ACE023ECDB3200CED390 /* TabBarController.swift */,
 				5309FF9023E257AF004C7F7A /* CreateController.swift */,
 				53E4AC8E23EB7EC200CED390 /* LoginController.swift */,
 				53E4AC9023ECA6B000CED390 /* MainController.swift */,
-				53E4AC9223ECB3E600CED390 /* SettingsController.swift */,
-				53E4ACE023ECDB3200CED390 /* TabBarController.swift */,
 				5309FF9523E257B0004C7F7A /* Assets.xcassets */,
 				5309FF8E23E257AF004C7F7A /* SceneDelegate.swift */,
 				5309FF8C23E257AF004C7F7A /* AppDelegate.swift */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5309FF9123E257AF004C7F7A /* CreateController.swift in Sources */,
+				53EB7ADD2426B20500779FED /* ReceivedController.swift in Sources */,
 				53E4ACE123ECDB3200CED390 /* TabBarController.swift in Sources */,
 				5309FF8D23E257AF004C7F7A /* AppDelegate.swift in Sources */,
 				53E4AC8923EB5A3000CED390 /* ForkController.swift in Sources */,

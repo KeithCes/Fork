@@ -17,6 +17,9 @@ import FirebaseDatabase
 let screenWidth  = UIScreen.main.fixedCoordinateSpace.bounds.width
 let screenHeight = UIScreen.main.fixedCoordinateSpace.bounds.height
 
+public var userEmail: String!
+public var userUsername: String!
+
 class CreateController: UIViewController, UITextFieldDelegate {
     
     var username = ""
@@ -124,17 +127,45 @@ class CreateController: UIViewController, UITextFieldDelegate {
                     print("user created")
                     
                     //adds to database
-                    var ref: DocumentReference? = nil
-                    ref = db.collection("users").addDocument(data: [
+                    db.collection("users").document(self.emailField.text!).setData([
                         "username": self.userField.text!,
                         "email": self.emailField.text!,
                     ]) { err in
                         if let err = err {
                             print("error adding document: \(err)")
                         } else {
-                            print("user added with ID: \(ref!.documentID)")
+                            print("user added")
                         }
                     }
+                    
+                    userEmail = self.emailField.text!
+                    userUsername = self.userField.text!
+
+                    /*
+                    //checks
+                    db.collection("users").getDocuments() { (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            for document in querySnapshot!.documents {
+                                print("\(document.documentID) => \(document.data())")
+                            }
+                        }
+                    }
+                    */
+                    
+                    //set email/user globals
+                   /* let db = Firestore.firestore()
+                    let docRef = db.collection("users").document("bk")
+                    print(docRef)
+                    docRef.getDocument { (document, error) in
+                        if let document = document, document.exists {
+                            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                            print("Document data: \(dataDescription)")
+                        } else {
+                            print("Document does not exist")
+                        }
+                    }*/
                     
                     
                     self.transitionToFork()

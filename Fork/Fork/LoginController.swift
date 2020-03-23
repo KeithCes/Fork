@@ -12,6 +12,7 @@ import FirebaseAuth
 import Firebase
 import SkyFloatingLabelTextField
 
+
 class LoginController: UIViewController, UITextFieldDelegate {
     
     var password = ""
@@ -87,6 +88,18 @@ class LoginController: UIViewController, UITextFieldDelegate {
         Auth.auth().signIn(withEmail: email, password: password) { username, error in
             if error == nil && username != nil {
                 print("logged in")
+                userEmail = self.emailField.text!
+                
+                let db = Firestore.firestore()
+                let docRef = db.collection("users").document(userEmail)
+                docRef.getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        userUsername = document.data()!["username"]! as? String
+                    } else {
+                        print("Document does not exist")
+                    }
+                }
+                
                 self.transitionToFork()
             }
             else {
