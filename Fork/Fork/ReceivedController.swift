@@ -47,7 +47,7 @@ class ReceivedController: UIViewController {
         }
     }
                         
-    
+    //test
     override func viewDidLoad() {
         super.viewDidLoad()
         
